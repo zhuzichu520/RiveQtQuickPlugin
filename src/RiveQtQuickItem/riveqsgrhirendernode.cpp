@@ -480,7 +480,7 @@ void RiveQSGRHIRenderNode::prepare()
     }
 
     if (!m_sampler) {
-        m_sampler = rhi->newSampler(QRhiSampler::Nearest, QRhiSampler::Nearest, QRhiSampler::None, QRhiSampler::ClampToEdge,
+        m_sampler = rhi->newSampler(QRhiSampler::Linear, QRhiSampler::Linear, QRhiSampler::None, QRhiSampler::ClampToEdge,
                                     QRhiSampler::ClampToEdge);
         m_sampler->create();
         m_cleanupList.append(m_sampler);
